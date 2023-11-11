@@ -2,12 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$pageName  = "Registration";
+$pageName = "Registration";
 require_once './layout/header.php';
 
-if(isset($_POST['regSubmit'])){
+if (isset($_POST['regSubmit'])) {
 
-    $acct_no = "9909".(substr(number_format(time() * rand(), 0, '', ''), 0, 6));
+    $acct_no = "9909" . (substr(number_format(time() * rand(), 0, '', ''), 0, 6));
     $acct_type = $_POST['acct_type'];
     $acct_currency = $_POST['acct_currency'];
     $firstname = $_POST['firstname'];
@@ -21,7 +21,7 @@ if(isset($_POST['regSubmit'])){
     $city = $_POST['city'];
     $state = $_POST['state'];
     $zipcode = $_POST['zipcode'];
-    $acct_address = $address." ".$suite. " ".$city." ".$state." ".$zipcode;
+    $acct_address = $address . " " . $suite . " " . $city . " " . $state . " " . $zipcode;
     $acct_email = $_POST['acct_email'];
     $acct_phone = $_POST['phoneNumber'];
     $acct_username = $_POST['username'];
@@ -33,9 +33,8 @@ if(isset($_POST['regSubmit'])){
     $acct_pin = inputValidation($_POST['acct_pin']);
 
 
-
-    if($acct_password !== $confirmPassword){
-        notify_alert('Password not matched','danger','3000','close');
+    if ($acct_password !== $confirmPassword) {
+        notify_alert('Password not matched', 'danger', '3000', 'close');
 
     }
 //    elseif ($ssn !== $confirm_ssn){
@@ -89,42 +88,39 @@ if(isset($_POST['regSubmit'])){
                     'ssn' => null,
                     'frontID' => null,
                     'backID' => null,
-                    'image'=>$n
+                    'image' => $n
                 ]);
 
-                    if (true) {
+                if (true) {
 
-                        // if ($acct_currency === 'USD') {
-                        //     $currency = "$";
-                        // } elseif ($acct_currency === 'EUR') {
-                        //     $currency = "&euro;";
-                        // }
+                    // if ($acct_currency === 'USD') {
+                    //     $currency = "$";
+                    // } elseif ($acct_currency === 'EUR') {
+                    //     $currency = "&euro;";
+                    // }
 
-                        $fullName = $firstname . " " . $lastname;
-                        //EMAIL SENDING
-                        $email = $acct_email;
-                        $APP_NAME = $pageTitle;
-                        $APP_URL = WEB_URL;
-                        $message = $sendMail->regMsgUser($fullName,$acct_no,$acct_status,$acct_email,$acct_phone,$acct_type,$acct_pin,$APP_NAME,$APP_URL);
-                        //User Email
-                        $subject = "Register - $APP_NAME";
-                        $email_message->send_mail($email, $message, $subject);
-                        // Admin Email
-                        $subject = "User Register - $APP_NAME";
-                        $email_message->send_mail(WEB_EMAIL, $message, $subject);
-                    }
-
-
-                    if (true) {
-                        toast_alert('success', 'Account Created Successfully, Kindly proceed to login', 'Approved');
-                    } else {
-                        toast_alert('error', 'Sorry something went wrong');
-                    }
-
+                    $fullName = $firstname . " " . $lastname;
+                    //EMAIL SENDING
+                    $email = $acct_email;
+                    $APP_NAME = $pageTitle;
+                    $APP_URL = WEB_URL;
+                    $message = $sendMail->regMsgUser($fullName, $acct_no, $acct_status, $acct_email, $acct_phone, $acct_type, $acct_pin, $APP_NAME, $APP_URL);
+                    //User Email
+                    $subject = "Register - $APP_NAME";
+                    $email_message->send_mail($email, $message, $subject);
+                    // Admin Email
+                    $subject = "User Register - $APP_NAME";
+                    $email_message->send_mail(WEB_EMAIL, $message, $subject);
                 }
+
+
+                if (true) {
+                    toast_alert('success', 'Account Created Successfully, Kindly proceed to login', 'Approved');
+                } else {
+                    toast_alert('error', 'Sorry something went wrong');
+                }
+
             }
-
-
         }
     }
 
@@ -160,7 +156,7 @@ if(isset($_POST['regSubmit'])){
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control"  name="firstname">
+                                    <input type="text" class="form-control" name="firstname">
                                     <label for="fname" class="wizard-form-text-label">First Name*</label>
                                     <div class="wizard-form-error"></div>
                                 </div>
@@ -182,18 +178,19 @@ if(isset($_POST['regSubmit'])){
                                         <option value="USD">USD</option>
                                         <option value="Euro">Euro</option>
                                         <option value="Yuan">Yuan</option>
-                                        <option value="GBP">GBP </option>
+                                        <option value="GBP">GBP</option>
                                         <option value="CAD">CAD</option>
 
                                     </select>
-                                    <label for="phoneNumber" class="wizard-form-text-label visibility-no">Currency Type*</label>
+                                    <label for="phoneNumber" class="wizard-form-text-label visibility-no">Currency
+                                        Type*</label>
                                     <div class="wizard-form-error"></div>
                                 </div>
                             </div>
 
                             <style>
-                                .visibility-no{
-                                    display:none;
+                                .visibility-no {
+                                    display: none;
                                 }
                             </style>
 
@@ -205,7 +202,8 @@ if(isset($_POST['regSubmit'])){
                                         <option value="Current">Current Account</option>
 
                                     </select>
-                                    <label for="occupation" class="wizard-form-text-label visibility-no">Account Type</label>
+                                    <label for="occupation" class="wizard-form-text-label visibility-no">Account
+                                        Type</label>
                                     <div class="wizard-form-error"></div>
                                 </div>
                             </div>
@@ -532,8 +530,10 @@ if(isset($_POST['regSubmit'])){
                             </div>
                         </div>
 
-                        <div class="form-group clearfix d-flex align-items-center flex-wrap justify-content-between w-100">
-                            <div class="my-sm-3 my-2">Already an account ? <a href="../login" class="text-info">Login</a> </div>
+                        <div
+                            class="form-group clearfix d-flex align-items-center flex-wrap justify-content-between w-100">
+                            <div class="my-sm-3 my-2">Already an account ? <a href="../login"
+                                                                              class="text-info">Login</a></div>
                             <a href="javascript:;" class="form-wizard-next-btn flex-end my-2">Next</a>
                         </div>
                     </fieldset>
@@ -573,8 +573,10 @@ if(isset($_POST['regSubmit'])){
                                     <label for="pwd" class="wizard-form-text-label">Password*</label>
                                     <div class="wizard-form-error"></div>
                                     <span class="wizard-password-eye"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                           height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                                           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                           height="24" viewBox="0 0 24 24" fill="none"
+                                                                           stroke="currentColor"
+                                                                           stroke-width="2" stroke-linecap="round"
+                                                                           stroke-linejoin="round"
                                                                            class="feather feather-lock">
                                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
@@ -591,8 +593,10 @@ if(isset($_POST['regSubmit'])){
                                         Password*</label>
                                     <div class="wizard-form-error"></div>
                                     <span class="wizard-password-eye"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                           height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                                           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                           height="24" viewBox="0 0 24 24" fill="none"
+                                                                           stroke="currentColor"
+                                                                           stroke-width="2" stroke-linecap="round"
+                                                                           stroke-linejoin="round"
                                                                            class="feather feather-lock">
                                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
@@ -657,7 +661,7 @@ if(isset($_POST['regSubmit'])){
                     <!--                </div>-->
                     <!--                <div class="col-md-10">-->
                     <!--                    <h6>No credit score impact</h6>-->
-                    <!--                    Applying for <?=WEB_TITLE?> Account will never impact your credit score-->
+                    <!--                    Applying for <?= WEB_TITLE ?> Account will never impact your credit score-->
                     <!--                </div>-->
                     <!--            </div>-->
 
@@ -701,7 +705,7 @@ if(isset($_POST['regSubmit'])){
                         <div class="mt-3">
                             <div class="form-group">
                                 <label for="frontDoc">Upload Profile Image</label>
-                                <input class="form-control" type="file" name="profile_pic" id="frontDoc" required />
+                                <input class="form-control" type="file" name="profile_pic" id="frontDoc" required/>
                             </div>
                         </div>
 
@@ -723,7 +727,8 @@ if(isset($_POST['regSubmit'])){
                             <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
                             <!--<a href="javascript:;" class="form-wizard-submit float-right">Submit</a>-->
                             <button class="form-wizard-submit float-right btn btn-primary" type="submit"
-                                    name="regSubmit">Submit</button>
+                                    name="regSubmit">Submit
+                            </button>
                         </div>
                     </fieldset>
                 </form>

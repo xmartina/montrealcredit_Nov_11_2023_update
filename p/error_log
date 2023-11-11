@@ -1,0 +1,2 @@
+[24-Dec-2022 09:22:17 UTC] PHP Warning:  include_once(/front/footer.php): failed to open stream: No such file or directory in /home/westcred/online.westcreditbank.com/p/working-capital-loans.php on line 125
+[24-Dec-2022 09:22:17 UTC] PHP Warning:  include_once(): Failed opening '/front/footer.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/westcred/online.westcreditbank.com/p/working-capital-loans.php on line 125

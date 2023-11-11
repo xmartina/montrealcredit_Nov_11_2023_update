@@ -1,0 +1,50 @@
+[29-May-2023 04:31:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[29-May-2023 16:07:13 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[29-May-2023 16:08:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[29-May-2023 16:51:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[29-May-2023 17:00:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[30-May-2023 15:29:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/credqvkh/dashboard.creditmonument.online/layout/header.php:6
+Stack trace:
+#0 /home/credqvkh/dashboard.creditmonument.online/login.php(2): include_once()
+#1 {main}
+  thrown in /home/credqvkh/dashboard.creditmonument.online/layout/header.php on line 6
+[30-May-2023 15:50:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[01-Jun-2023 11:59:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[01-Jun-2023 12:02:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[01-Jun-2023 12:22:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[01-Jun-2023 14:40:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[02-Jun-2023 09:57:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[03-Jun-2023 13:10:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[03-Jun-2023 22:07:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[04-Jun-2023 18:04:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[06-Jun-2023 13:01:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[06-Jun-2023 14:58:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[06-Jun-2023 17:57:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[06-Jun-2023 18:33:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[06-Jun-2023 18:59:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[06-Jun-2023 20:10:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[07-Jun-2023 05:11:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[07-Jun-2023 06:11:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[07-Jun-2023 07:02:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[07-Jun-2023 09:27:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[16-Jun-2023 13:03:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[16-Jun-2023 13:07:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[16-Jun-2023 19:35:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[16-Jun-2023 19:54:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[16-Jun-2023 20:00:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[18-Jun-2023 21:49:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[19-Jun-2023 17:06:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[19-Jun-2023 21:34:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[19-Jun-2023 21:43:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[20-Jun-2023 21:01:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[23-Jun-2023 16:07:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[26-Jun-2023 09:14:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[26-Jun-2023 11:08:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[26-Jun-2023 15:59:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[26-Jun-2023 16:10:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[27-Jun-2023 13:49:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[28-Jun-2023 16:29:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[02-Jul-2023 11:01:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[02-Jul-2023 11:01:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[05-Jul-2023 10:10:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37
+[05-Jul-2023 10:42:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/credqvkh/dashboard.creditmonument.online/pin.php on line 37

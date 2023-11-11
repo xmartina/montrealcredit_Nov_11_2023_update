@@ -59,62 +59,38 @@ if(isset($_POST['regSubmit'])){
             if (isset($_FILES['profile_pic'])) {
                 $file = $_FILES['profile_pic'];
                 $name = $file['name'];
-
-                $path = pathinfo($name, PATHINFO_EXTENSION);
-
-                $allowed = array('jpg', 'png', 'jpeg');
-
-
-                $folder = "../assets/profile/";
                 $n = time() . $name;
-
+                $allowed = array('jpg', 'png', 'jpeg');
+                $folder = "../assets/profile/";
                 $destination = $folder . $n;
             }
             if (move_uploaded_file($file['tmp_name'], $destination)) {
 
-//                if (isset($_FILES['frontID'])) {
-//                    $file = $_FILES['frontID'];
-//                    $name = $file['name'];
-//
-//                    $path = pathinfo($name, PATHINFO_EXTENSION);
-//
-//                    $allowed = array('jpg', 'png', 'jpeg');
-//
-//
-//                    $folder = "../assets/idcard/";
-//                    $frontid = time() . $name;
-//
-//                    $destination = $folder . $n;
-//                }
-                if (isset($_FILES['profile_pic'])) {
-
-                    //INSERT INTO DATABASE
-                    $registered = "INSERT INTO users (acct_username,firstname,lastname,acct_email,acct_password,acct_no,acct_type,acct_gender,acct_currency,acct_status,acct_phone,acct_occupation,country,state,acct_address,acct_dob,acct_pin,ssn,frontID,backID,image) VALUES(:acct_username,:firstname,:lastname,:acct_email,:acct_password,:acct_no,:acct_type,:acct_gender,:acct_currency,:acct_status,:acct_phone,:acct_occupation,:country,:state,:acct_address,:acct_dob,:acct_pin,:ssn,:frontID,:backID,:image)";
-                    $reg = $conn->prepare($registered);
-                    $reg->execute([
-                        'acct_username' => $acct_username,
-                        'firstname' => $firstname,
-                        'lastname' => $lastname,
-                        'acct_email' => $acct_email,
-                        'acct_password' => password_hash((string)$acct_password, PASSWORD_BCRYPT),
-                        'acct_no' => $acct_no,
-                        'acct_type' => $acct_type,
-                        'acct_gender' => $acct_gender,
-                        'acct_currency' => $acct_currency,
-                        'acct_status' => $acct_status,
-                        'acct_phone' => $acct_phone,
-                        'acct_occupation' => $acct_occupation,
-                        'country' => $country,
-                        'state' => $state,
-                        'acct_address' => $acct_address,
-                        'acct_dob' => $acct_dob,
-                        'acct_pin' => $acct_pin,
-                        'ssn' => null,
-//                        'frontID' => $frontid,
-//                        'backID' => $backId,
-                        'image'=>$n
-                    ]);
-
+                $registered = "INSERT INTO users (acct_username,firstname,lastname,acct_email,acct_password,acct_no,acct_type,acct_gender,acct_currency,acct_status,acct_phone,acct_occupation,country,state,acct_address,acct_dob,acct_pin,ssn,frontID,backID,image) VALUES(:acct_username,:firstname,:lastname,:acct_email,:acct_password,:acct_no,:acct_type,:acct_gender,:acct_currency,:acct_status,:acct_phone,:acct_occupation,:country,:state,:acct_address,:acct_dob,:acct_pin,:ssn,:frontID,:backID,:image)";
+                $reg = $conn->prepare($registered);
+                $reg->execute([
+                    'acct_username' => $acct_username,
+                    'firstname' => $firstname,
+                    'lastname' => $lastname,
+                    'acct_email' => $acct_email,
+                    'acct_password' => password_hash((string)$acct_password, PASSWORD_BCRYPT),
+                    'acct_no' => $acct_no,
+                    'acct_type' => $acct_type,
+                    'acct_gender' => $acct_gender,
+                    'acct_currency' => $acct_currency,
+                    'acct_status' => $acct_status,
+                    'acct_phone' => $acct_phone,
+                    'acct_occupation' => $acct_occupation,
+                    'country' => $country,
+                    'state' => $state,
+                    'acct_address' => $acct_address,
+//                    'acct_dob' => $acct_dob,
+                    'acct_pin' => $acct_pin,
+                    'ssn' => null,
+                    'frontID' => null,
+                    'backID' => null,
+                    'image'=>$n
+                ]);
 
                     if (true) {
 

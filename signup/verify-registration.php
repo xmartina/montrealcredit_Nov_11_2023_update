@@ -37,10 +37,12 @@ if(isset($_POST['regSubmit'])){
     if($acct_password !== $confirmPassword){
         notify_alert('Password not matched','danger','3000','close');
 
-    }elseif ($ssn !== $confirm_ssn){
-        notify_alert('SSN / TIN not matched','danger','3000','close');
-
-    }else {
+    }
+//    elseif ($ssn !== $confirm_ssn){
+//        notify_alert('SSN / TIN not matched','danger','3000','close');
+//
+//    }
+    else {
         //checking exiting email
 
         $usersVerified = "SELECT * FROM users WHERE acct_email=:acct_email or acct_username=:acct_username";
@@ -70,20 +72,20 @@ if(isset($_POST['regSubmit'])){
             }
             if (move_uploaded_file($file['tmp_name'], $destination)) {
 
-                if (isset($_FILES['frontID'])) {
-                    $file = $_FILES['frontID'];
-                    $name = $file['name'];
-
-                    $path = pathinfo($name, PATHINFO_EXTENSION);
-
-                    $allowed = array('jpg', 'png', 'jpeg');
-
-
-                    $folder = "../assets/idcard/";
-                    $frontid = time() . $name;
-
-                    $destination = $folder . $n;
-                }
+//                if (isset($_FILES['frontID'])) {
+//                    $file = $_FILES['frontID'];
+//                    $name = $file['name'];
+//
+//                    $path = pathinfo($name, PATHINFO_EXTENSION);
+//
+//                    $allowed = array('jpg', 'png', 'jpeg');
+//
+//
+//                    $folder = "../assets/idcard/";
+//                    $frontid = time() . $name;
+//
+//                    $destination = $folder . $n;
+//                }
                 if (isset($_FILES['profile_pic'])) {
 
                     //INSERT INTO DATABASE
@@ -107,9 +109,9 @@ if(isset($_POST['regSubmit'])){
                         'acct_address' => $acct_address,
                         'acct_dob' => $acct_dob,
                         'acct_pin' => $acct_pin,
-                        'ssn' => $ssn,
-                        'frontID' => $frontid,
-                        'backID' => $backId,
+                        'ssn' => null,
+//                        'frontID' => $frontid,
+//                        'backID' => $backId,
                         'image'=>$n
                     ]);
 

@@ -115,7 +115,7 @@ if (isset($_POST['regSubmit'])) {
 
 
                 if (true) {
-                    toast_alert('success', 'Account Created Successfully, Kindly proceed to login', 'Approved');
+                    toast_alert('success', 'Account Created Successfully, Contact Support via contact@montrealcredit.online for account info', 'Approved');
                 } else {
                     toast_alert('error', 'Sorry something went wrong');
                 }
